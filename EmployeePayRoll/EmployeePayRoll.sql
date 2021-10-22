@@ -24,6 +24,7 @@ INSERT INTO employee_payroll VALUES ('Manish', 50000, '2018-07-07')
 INSERT INTO employee_payroll VALUES ('Kumar', 60000, '2019-06-06')
 
 -- UC4 => Select and print all data in employee_payroll table
+SELECT * FROM employee_payroll
 
 -- UC5 => Select salary of particular employee, Select employees joined in particular period of time
 
