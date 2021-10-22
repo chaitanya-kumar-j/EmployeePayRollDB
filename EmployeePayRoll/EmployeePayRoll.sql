@@ -34,6 +34,14 @@ SELECT Name,Salary FROM employee_payroll WHERE Name = 'Chaitanya'
 SELECT Name,Salary FROM employee_payroll WHERE StartDate BETWEEN CAST('2019-01-01' as DATE) AND GETDATE()
 
 -- UC6 => Add new column to table and add data into column
+ALTER TABLE employee_payroll
+ADD Gender CHAR(1)
+
+UPDATE employee_payroll SET Gender = 'M' WHERE Name = 'Chaitanya' or Name = 'Kumar' or Name = 'Manish'
+
+UPDATE employee_payroll SET Gender = 'F' WHERE Name = 'Mabel' or Name = 'Name' or Name = 'Mounika'
+
+select * from employee_payroll
 
 -- UC7 => Mathematical operations on salary column, gender wise
 
