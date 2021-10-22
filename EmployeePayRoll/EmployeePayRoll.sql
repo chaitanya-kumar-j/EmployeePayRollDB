@@ -27,6 +27,11 @@ INSERT INTO employee_payroll VALUES ('Kumar', 60000, '2019-06-06')
 SELECT * FROM employee_payroll
 
 -- UC5 => Select salary of particular employee, Select employees joined in particular period of time
+-- Find salary of particular employee
+SELECT Name,Salary FROM employee_payroll WHERE Name = 'Chaitanya'
+
+-- Find employees joined in particular period of time
+SELECT Name,Salary FROM employee_payroll WHERE StartDate BETWEEN CAST('2019-01-01' as DATE) AND GETDATE()
 
 -- UC6 => Add new column to table and add data into column
 
