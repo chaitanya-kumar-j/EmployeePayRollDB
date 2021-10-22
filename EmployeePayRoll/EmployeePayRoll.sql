@@ -44,5 +44,10 @@ UPDATE employee_payroll SET Gender = 'F' WHERE Name = 'Mabel' or Name = 'Name' o
 select * from employee_payroll
 
 -- UC7 => Mathematical operations on salary column, gender wise
+SELECT SUM(salary) FROM employee_payroll WHERE Gender = 'M' GROUP BY Gender;
+SELECT AVG(salary) FROM employee_payroll WHERE Gender = 'F' GROUP BY Gender;
+SELECT MIN(salary) FROM employee_payroll WHERE Gender = 'M' GROUP BY Gender;
+SELECT MAX(salary) FROM employee_payroll WHERE Gender = 'F' GROUP BY Gender;
+SELECT COUNT(Name) FROM employee_payroll WHERE Gender = 'M' GROUP BY Gender;
 
 -- UC => 
