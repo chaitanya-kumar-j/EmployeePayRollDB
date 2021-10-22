@@ -50,4 +50,12 @@ SELECT MIN(salary) FROM employee_payroll WHERE Gender = 'M' GROUP BY Gender;
 SELECT MAX(salary) FROM employee_payroll WHERE Gender = 'F' GROUP BY Gender;
 SELECT COUNT(Name) FROM employee_payroll WHERE Gender = 'M' GROUP BY Gender;
 
--- UC => 
+-- UC8 => Add new Columns
+ALTER TABLE employee_payroll ADD 
+Phone VARCHAR(10),
+Department VARCHAR(50) not null default 'Administration',
+Address VARCHAR(100) not null default 'BridgeLabz,Bangalore' 
+
+select * from employee_payroll
+
+-- UC9 => 
