@@ -67,3 +67,11 @@ IncomeTax FLOAT,
 NetPay FLOAT;
 
 SELECT * FROM employee_payroll
+
+-- UC10 => Add Terisa in multiple time
+INSERT INTO employee_payroll VALUES 
+('Terisa', 50000, '2018-07-07', 'F', '1234567890', 'Sales and Marketing', 'BridgeLabz,Bangalore', 789.0, 3456.4, 45.26, 123.4, 34567)
+INSERT INTO employee_payroll VALUES 
+('Terisa', 60000, '2018-07-07', 'F', '1234567890', 'Sales and Marketing', 'BridgeLabz,Bangalore', 879.0, 4457.3, 55.26, 133.4, 45678)
+SELECT * FROM employee_payroll
+
