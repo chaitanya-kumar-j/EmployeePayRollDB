@@ -41,7 +41,7 @@ UPDATE employee_payroll SET Gender = 'M' WHERE Name = 'Chaitanya' or Name = 'Kum
 
 UPDATE employee_payroll SET Gender = 'F' WHERE Name = 'Mabel' or Name = 'Name' or Name = 'Mounika'
 
-select * from employee_payroll
+SELECT * FROM employee_payroll
 
 -- UC7 => Mathematical operations on salary column, gender wise
 SELECT SUM(salary) FROM employee_payroll WHERE Gender = 'M' GROUP BY Gender;
@@ -56,6 +56,14 @@ Phone VARCHAR(10),
 Department VARCHAR(50) not null default 'Administration',
 Address VARCHAR(100) not null default 'BridgeLabz,Bangalore' 
 
-select * from employee_payroll
+SELECT * FROM employee_payroll
 
--- UC9 => 
+-- UC9 => Add Somemore columns
+ALTER TABLE employee_payroll ADD 
+BasicPay FLOAT,
+Deductions FLOAT,
+TaxablePay FLOAT,
+IncomeTax FLOAT,
+NetPay FLOAT;
+
+SELECT * FROM employee_payroll
